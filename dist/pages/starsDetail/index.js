@@ -1,0 +1,210 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+var _dec, _class, _class2, _temp2;
+
+var _index = require("../../npm/@tarojs/taro-weapp/index.js");
+
+var _index2 = _interopRequireDefault(_index);
+
+var _withSare = require("../../utils/withSare.js");
+
+var _withSare2 = _interopRequireDefault(_withSare);
+
+var _util = require("../../service/util.js");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var alertClose = "/assets/alertClose.png";
+var alert = "/assets/alerts.png";
+
+// const starsData = Taro.getStorageSync('starsData');
+
+var Success = (_dec = (0, _withSare2.default)(), _dec(_class = (_temp2 = _class2 = function (_BaseComponent) {
+  _inherits(Success, _BaseComponent);
+
+  function Success() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, Success);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Success.__proto__ || Object.getPrototypeOf(Success)).call.apply(_ref, [this].concat(args))), _this), _this.$usedState = ["data", "id", "alert", "gid", "gid_pic", "alertClose", "isOpened"], _this.config = {
+      navigationBarTitleText: '好奇官方精品商城',
+      disableScroll: true
+    }, _this.$$refs = [], _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(Success, [{
+    key: "_constructor",
+    value: function _constructor() {
+      _get(Success.prototype.__proto__ || Object.getPrototypeOf(Success.prototype), "_constructor", this).apply(this, arguments);
+      this.state = {
+        // list: [],
+        isOpened: false
+      };
+    }
+  }, {
+    key: "componentDidMount",
+    value: function componentDidMount() {}
+  }, {
+    key: "componentDidShow",
+    value: function componentDidShow() {
+      var id = this.$router.params.id;
+      /* eslint-disable */
+      var app = getApp();
+      /* eslint-enable */
+      app.km.track('page_recdetail_' + id, null);
+      (0, _util.isLogin)();
+    }
+  }, {
+    key: "onhandleChange",
+    value: function onhandleChange(id) {
+      /* eslint-disable */
+      var app = getApp();
+      /* eslint-enable */
+      app.km.track('share_' + id, null);
+      this.setState({
+        isOpened: true
+      });
+    }
+  }, {
+    key: "onClose",
+    value: function onClose() {
+      this.setState({
+        isOpened: false
+      });
+    }
+  }, {
+    key: "shareInfo",
+    value: function shareInfo(gid, gid_pic, id) {
+      /* eslint-disable */
+      var app = getApp();
+      /* eslint-enable */
+      app.km.track('hwq_' + id, null);
+      var version = 0;
+      wx.getSystemInfo({
+        success: function success(e) {
+          // var a = e.model;
+          version = e.version;
+        }
+      });
+      version = version.replace(/\./g, '');
+      var titles = '好奇心钻装超值装初生号66片';
+      if (gid !== 8) {
+        titles = '好奇铂金装倍柔亲肤纸尿裤电商箱装小号96片';
+      }
+      if (gid == 28) {
+        titles = '好奇铂蜜桃限定款心钻装纸尿裤';
+      }
+      // console.warn(gid)
+
+      if (version < 703) {
+        _index2.default.showToast({
+          title: '该功能仅支持微信7.0.3以上版本',
+          icon: 'none',
+          mask: true
+        });
+      } else {
+        // Taro.showToast({
+        //   title : titles ,
+        //   icon : 'none' ,
+        //   mask : true
+        // })
+        if (wx.openBusinessView) {
+          wx.openBusinessView({
+            businessType: 'friendGoodsRecommend',
+            extraData: {
+              product: {
+                item_code: gid, //物品id 唯一
+                title: titles, // 物品名称
+                image_list: gid_pic //物品封面
+              }
+            },
+            success: function success(res) {
+              if (res.errCode === 0) {
+                // wx.showToast({
+                //   title: '推荐成功'
+                // });
+              }
+            },
+            fail: function fail(res) {
+              console.log(res);
+              // wx.showToast({
+              //     title: '推荐失败',
+              //     icon: 'none'
+              // });
+            }
+          });
+        }
+      }
+    }
+  }, {
+    key: "_createData",
+    value: function _createData() {
+      this.__state = arguments[0] || this.state || {};
+      this.__props = arguments[1] || this.props || {};
+      var __runloopRef = arguments[2];
+      ;
+
+      var id = this.$router.params.id;
+      var total = this.$router.params.total;
+      var gid = this.$router.params.gid;
+      var gid_pic = this.$router.params.gid_pic;
+      // let id = 4;
+      var data = { id: id, total: total, gid: gid, gid_pic: gid_pic };
+
+      this.anonymousFunc0 = function (e) {
+        // console.log(e)
+        e.stopPropagation();
+        // e.preventDefault()
+        /* eslint-disable */
+        var app = getApp();
+        /* eslint-enable */
+        app.km.track('sharefriend_' + id, null);
+      };
+
+      Object.assign(this.__state, {
+        data: data,
+        id: id,
+        alert: alert,
+        gid: gid,
+        gid_pic: gid_pic,
+        alertClose: alertClose
+      });
+      return this.__state;
+    }
+  }, {
+    key: "anonymousFunc0",
+    value: function anonymousFunc0(e) {
+      e.stopPropagation();
+    }
+  }]);
+
+  return Success;
+}(_index.Component), _class2.properties = {}, _class2.$$events = ["onhandleChange", "anonymousFunc0", "shareInfo", "onClose"], _class2.propTypes = {
+  // newBooks: PropTypes.arrayOf(PropTypes.object),
+  // hotBooks: PropTypes.arrayOf(PropTypes.object),
+  // recommendBooks: PropTypes.arrayOf(PropTypes.object)
+}, _temp2)) || _class);
+exports.default = Success;
+
+Component(require('../../npm/@tarojs/taro-weapp/index.js').default.createComponent(Success, true));

@@ -1,0 +1,214 @@
+
+.wrap {
+  height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; }
+
+.boxWrap {
+  margin-bottom: 36rpx; }
+
+.boxWrap:nth-last-child(1) {
+  margin-bottom: 56rpx; }
+
+.box {
+  width: 694rpx;
+  min-height: 201rpx;
+  margin: 0 auto;
+  border-radius: 15rpx;
+  -webkit-box-shadow: 0 2rpx 20rpx #e3e3e3;
+          box-shadow: 0 2rpx 20rpx #e3e3e3;
+  position: relative;
+  z-index: 10;
+  top: 36rpx;
+  bottom: 50rpx; }
+  .box .fc {
+    width: 694rpx;
+    height: 121rpx;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    margin: 0 auto; }
+  .box .fa {
+    width: 264rpx;
+    height: 201rpx;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    left: 0; }
+  .box Image {
+    width: 100%; }
+  .box .leftNums {
+    width: 192rpx;
+    height: 79rpx;
+    position: absolute;
+    top: 57rpx;
+    left: 27rpx;
+    text-align: center;
+    font-size: 79rpx;
+    line-height: 79rpx;
+    font-weight: 900;
+    color: #fff; }
+    .box .leftNums Text {
+      font-size: 48rpx; }
+  .box .staus {
+    position: absolute;
+    right: 25rpx;
+    top: 12rpx;
+    font-size: 23rpx;
+    color: #fff; }
+  .box .sea {
+    width: 370rpx;
+    height: 110rpx;
+    right: 50rpx;
+    top: 53rpx;
+    position: absolute; }
+    .box .sea View {
+      width: 370rpx;
+      height: 23rpx;
+      font-size: 23rpx;
+      color: #898989;
+      margin-bottom: 14rpx;
+      position: relative;
+      line-height: 23rpx;
+      overflow: hidden;
+      -o-text-overflow: ellipsis;
+         text-overflow: ellipsis;
+      white-space: nowrap; }
+      .box .sea View Text {
+        height: 23rpx;
+        line-height: 23rpx; }
+    .box .sea .tit {
+      width: 280rpx; }
+    .box .sea .rules Text {
+      text-decoration: underline; }
+    .box .sea .rules Image {
+      width: 23rpx;
+      text-align: right;
+      position: absolute;
+      right: 0;
+      bottom: 0; }
+    .box .sea .times Image {
+      width: 22rpx;
+      height: 22rpx;
+      margin-top: 4rpx;
+      margin-right: 7rpx;
+      position: absolute;
+      left: 0;
+      top: -4rpx;
+      z-index: 10; }
+    .box .sea .times .timer {
+      position: absolute;
+      right: 0; }
+    .box .sea .times .tim {
+      margin-left: 32rpx; }
+
+.acord {
+  width: 690rpx;
+  min-height: 50rpx;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 15rpx;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-shadow: 0 2rpx 20rpx #e3e3e3;
+          box-shadow: 0 2rpx 20rpx #e3e3e3;
+  top: 16rpx;
+  z-index: 9; }
+  .acord .main {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 35rpx;
+    padding-bottom: 15rpx;
+    margin-left: 25rpx;
+    font-size: 20rpx;
+    color: #ccc;
+    line-height: 33rpx;
+    display: inline-block; }
+
+.none {
+  text-align: center;
+  font-size: 25rpx;
+  padding-top: 50rpx;
+  color: #ccc; }
+
+.righ {
+  width: 35rpx;
+  height: 35rpx;
+  position: absolute;
+  top: 13rpx;
+  left: 13rpx; }
+  .righ Image {
+    width: 35rpx;
+    height: 35rpx; }
+
+.botomsX {
+  width: 100%;
+  height: 181rpx;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  z-index: 100; }
+  .botomsX .txtWrap {
+    width: 600rpx; }
+  .botomsX Text {
+    font-size: 29rpx;
+    margin-left: 64rpx;
+    position: relative;
+    height: 38rpx;
+    line-height: 38rpx;
+    top: 43rpx; }
+  .botomsX .money {
+    font-size: 38rpx;
+    font-weight: 800;
+    color: #632e1c;
+    line-height: 38rpx;
+    margin-left: 14rpx;
+    position: absolute;
+    top: 0; }
+  .botomsX Image {
+    width: 265rpx;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0; }
+  .botomsX .sure {
+    position: absolute;
+    top: 0;
+    right: 96rpx;
+    height: 43rpx;
+    margin: 0;
+    color: #fff;
+    top: 40rpx; }
+
+.botoms {
+  width: 100%;
+  height: 120rpx;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  line-height: 120rpx; }
+  .botoms Text {
+    font-size: 29rpx;
+    margin-top: 43rpx;
+    margin-left: 64rpx; }
+  .botoms .money {
+    font-size: 38rpx;
+    font-weight: 800;
+    color: #632e1c;
+    margin-left: 14rpx; }
+  .botoms Image {
+    width: 265rpx;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0; }
+  .botoms .sure {
+    position: absolute;
+    top: 0;
+    right: 96rpx;
+    height: 43rpx;
+    margin: 0;
+    color: #fff; }

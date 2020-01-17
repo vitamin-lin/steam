@@ -1,0 +1,11 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var GET_GOOD_BY_ID = exports.GET_GOOD_BY_ID = 'GET_GOOD_BY_ID';
+var SHOW_GOOD_DETAIL = exports.SHOW_GOOD_DETAIL = 'SHOW_GOOD_DETAIL';
+var ADD_CARD_STATUS = exports.ADD_CARD_STATUS = 'ADD_CARD_STATUS';
+var CHANGE_GOOD_TYPE = exports.CHANGE_GOOD_TYPE = 'CHANGE_GOOD_TYPE';
+var CHAGNE_ACTION_TYPE = exports.CHAGNE_ACTION_TYPE = 'CHAGNE_ACTION_TYPE';
+var CHANGE_GROUP_LIST = exports.CHANGE_GROUP_LIST = 'CHANGE_GROUP_LIST';

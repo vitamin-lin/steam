@@ -1,0 +1,28 @@
+<block>
+    <view class="address-wrap">
+        <view class="address-cn" catchtap="anonymousFunc0">
+            <view class="icon-local">
+                <image class="icon-pic" src="{{localIcon}}"></image>
+            </view>
+            <view class="address-info">
+                <block>
+                    <block wx:if="{{userAddrss.userName}}">
+                        <view class="add-cn">
+                            <view class="name-tel">{{userAddrss.userName}}<text class="user-tel">{{userAddrss.telNumber}}</text>
+                            </view>
+                            <view class="add-detail">{{userAddrss.provinceName}}{{userAddrss.cityName}}{{userAddrss.countyName}}{{userAddrss.detailInfo}}</view>
+                        </view>
+                    </block>
+                    <block wx:else>
+                        <view class="tip_add">尚未添加地址，点击去添加
+                            <image class="icon-points" src="{{pointIcon}}"></image>
+                        </view>
+                    </block>
+                </block>
+            </view>
+            <view class="icon-arrow">
+                <image class="icon-pic" src="{{arrowIcon}}"></image>
+            </view>
+        </view>
+    </view>
+</block>

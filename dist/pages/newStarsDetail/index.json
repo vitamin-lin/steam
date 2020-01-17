@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "banner": "./banners/banner",
+    "at-curtain": "../../npm/taro-ui/dist/weapp/components/curtain/index"
+  },
+  "navigationBarTitleText": "好奇官方精品商城",
+  "disableScroll": true
+}

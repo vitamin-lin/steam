@@ -1,0 +1,65 @@
+<block>
+    <view class="wrap">
+        <block wx:if="{{list.length === 0}}">
+            <view class="none">－－暂无优惠券－－</view>
+        </block>
+        <block wx:if="{{list.length !== 0}}">
+            <view class="boxWrap" wx:key="key" wx:for="{{loopArray0}}" wx:for-item="item" wx:for-index="key">
+                <view class="box" style="{{item.$loopState__temp2}}">
+                    <block wx:if="{{parLink !== '1' || parLink !== '1' && item.$original.use_status == 0}}">
+                        <view>
+                            <view class="fc" bindtap="checked" data-e-tap-so="this" data-e-tap-a-a="{{key}}"></view>
+                            <view class="fa" bindtap="checked" data-e-tap-so="this" data-e-tap-a-a="{{key}}"></view>
+                        </view>
+                    </block>
+                    <block wx:if="{{item.$original.status == '1' && item.$original.checked}}">
+                        <view class="righ">
+                            <image mode="widthFix" src="https://mpmall.huggiesapp.cn/storage/wxmall/another/coupons/rightIcon.png"></image>
+                        </view>
+                    </block>
+                    <view class="leftNums"><text>{{item.$original.type == 3 ? '' : '￥'}}</text>{{item.$original.type == 3 ? item.$original.discount / 10 : item.$original.discount / 100}}<text>{{item.$original.type == 3 ? '折' : ''}}</text>
+                    </view>
+                    <view class="staus">
+                        <block>
+                            <block wx:if="{{item.$original.status == '1'}}">{{'已领取'}}</block>
+                            <block wx:else>
+                                <view></view>
+                            </block>
+                        </block>
+                        <block>
+                            <block wx:if="{{item.$original.status == '2'}}">{{'已使用'}}</block>
+                            <block wx:else>
+                                <view></view>
+                            </block>
+                        </block>
+                        <block>
+                            <block wx:if="{{item.$original.status == '3'}}">{{'已过期'}}</block>
+                            <block wx:else>
+                                <view></view>
+                            </block>
+                        </block>
+                    </view>
+                    <view class="sea">
+                        <view class="tit">{{item.$original.name}}</view>
+                        <view class="times">
+                            <image mode="widthFix" src="https://mpmall.huggiesapp.cn/storage/wxmall/another/coupons/timeIcon.png"></image><text class="tim">有效期</text><text class="timer">{{' '}}{{item.$original.date_start}}~{{item.$original.date_end}}</text>
+                        </view>
+                        <view class="rules" bindtap="handleClick" data-e-tap-so="this" data-e-tap-a-a="{{key}}" data-e-tap-a-b="rules"><text>使用规则</text>
+                            <image mode="widthFix" src="{{item.$original.open ? icons : iconbtom}}"></image>
+                        </view>
+                    </view>
+                </view>
+                <block wx:if="{{item.$original.open}}">
+                    <view class="acord"><text class="main">{{item.$original.desc ? item.$original.desc : ''}}</text>
+                    </view>
+                </block>
+            </view>
+        </block>
+        <block wx:if="{{_type !== '1'}}">
+            <view class="{{isIphoneX == 0 ? 'botoms' : 'botomsX'}}">
+                <image src="https://mpmall.huggiesapp.cn/storage/wxmall/another/detail_tabBar_06.png"></image><text>已选{{discount_desc == 0 ? 0 : 1}}张，共抵扣<text class="money">¥{{discount_desc / 100}}</text></text>
+                <view class="sure" bindtap="subimitData">确认</view>
+            </view>
+        </block>
+    </view>
+</block>

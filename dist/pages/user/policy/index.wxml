@@ -1,0 +1,7 @@
+<block>
+    <view class="home-policy">
+        <view wx:key="index" class="home-policy__item" bindtap="linkGrid" wx:for="{{list}}" wx:for-item="item" wx:for-index="index" data-e-tap-so="this" data-e-tap-a-a="{{item}}" data-e-tap-a-b="{{index}}">
+            <image class="home-policy__item-img" src="{{item.image}}"></image><text class="home-policy__item-txt">{{item.value}}</text>
+        </view>
+    </view>
+</block>

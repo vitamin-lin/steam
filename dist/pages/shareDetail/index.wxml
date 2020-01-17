@@ -1,0 +1,144 @@
+<block>
+    <block wx:if="{{!shareGroupInfo}}">
+        <view>数据加载……</view>
+    </block>
+    <view class="page-wrap" wx:else>
+        <view class="head-wrap">
+            <view class="slogan-tip">
+                <view class="slogan-tip-txt">两人组队 直降 {{anonymousState__temp2}}</view>
+            </view>
+            <view class="head-pic">
+                <image class="head-pic-img" mode="widthFix" src="{{anonymousState__temp3}}"></image>
+            </view>
+        </view>
+        <view class="{{isIphoneX ? 'fix-footer' : 'fix-footer noipx'}}">
+            <view class="footer-cn">
+                <view class="share-wrap">
+                    <view class="{{status == 1 || status == 2 ? 'share-cn' : 'share-cn hideHandle'}}">
+                        <view class="share-tip">
+                            <block>
+                                <block wx:if="{{status == 1}}">
+                                    <view class="kmCountDown" wx:key="count-down">
+                                        <view class="lp">组队倒计时</view>
+                                        <view class="countDown-cn">
+                                            <at-countdown format="{{anonymousState__temp}}" __triggerObserer="{{ _triggerObserer }}" hours="{{ct ? ct.h : 1}}" minutes="{{ct ? ct.m : 1}}" seconds="{{ct ? ct.s : 59}}" bindontimeup="onTimeUp" __fn_onTimeUp="{{true}}" data-e-ontimeup-so="this"></at-countdown>
+                                        </view>
+                                        <view class="countDown-txt">
+                                            <view class="at-row">
+                                                <view class="at-col">HOU</view>
+                                                <view class="at-col">MIN</view>
+                                                <view class="at-col">SEC</view>
+                                            </view>
+                                        </view>
+                                    </view>
+                                </block>
+                                <block wx:else>
+                                    <block>
+                                        <block wx:if="{{role_status == 1}}">
+                                            <view class="share-tip-cn" wx:key="mother-later">
+                                                <view class="lp">妈妈来晚啦～</view>
+                                                <view class="lp">您的好友已经成功组队</view>
+                                            </view>
+                                        </block>
+                                        <block wx:else>
+                                            <view class="share-tip-cn" wx:key="join-team-suc">
+                                                <view class="lp">你已组队成功！</view>
+                                                <view class="lp">我们会尽快为你发货~</view>
+                                            </view>
+                                        </block>
+                                    </block>
+                                </block>
+                            </block>
+                        </view>
+                        <view class="share-handle">
+                            <view class="handle-cn" wx:key="handle-share-join">
+                                <view class="avatar-wrap">
+                                    <block>
+                                        <block wx:if="{{userInfo[0].avatar && !IDStaus}}">
+                                            <image class="avatar-pic" mode="widthFix" src="{{userInfo[0].avatar}}"></image>
+                                        </block>
+                                        <block wx:else>
+                                            <open-data type="userAvatarUrl" __triggerObserer="{{ _triggerObserer }}"></open-data>
+                                        </block>
+                                    </block>
+                                </view>
+                                <block>
+                                    <block wx:if="{{status == 1 && role_status == 0}}">
+                                        <button class="share-btn avatar-wrap" open-type="share" bindtap="anonymousFunc7">
+                                            <image class="avatar-pic" mode="widthFix" src="{{iconPlus}}"></image>
+                                        </button>
+                                    </block>
+                                    <block wx:else>
+                                        <view class="avatar-wrap" catchtap="anonymousFunc8">
+                                            <block>
+                                                <block wx:if="{{!infoStaus}}">
+                                                    <image class="avatar-pic" mode="widthFix" src="{{status == 1 ? iconPlus : userInfo[1].avatar}}"></image>
+                                                </block>
+                                                <block wx:else>
+                                                    <open-data type="userAvatarUrl" __triggerObserer="{{ _triggerObserer }}"></open-data>
+                                                </block>
+                                            </block>
+                                        </view>
+                                    </block>
+                                </block>
+                                <view class="mes" bindtap="makeSes">点击此处，及时订阅消息</view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="d-toolBar">
+                    <block>
+                        <block wx:if="{{status == 1}}">
+                            <block>
+                                <block wx:if="{{role_status == 0}}">
+                                    <view class="tool-cn" wx:key="btn-reback-home">
+                                        <button class="tab-invitation" bindtap="anonymousFunc0" open-type="share" style="background-image: url(https://mpmall.huggiesapp.cn/storage/wxmall/another/detail_tabBar_06.png)">
+                                            <view class="tab-text">邀请好友组队</view>
+                                        </button>
+                                    </view>
+                                </block>
+                                <block wx:else>
+                                    <view class="tool-cn" wx:key="three-tab-all">
+                                        <view class="tab-rule" catchtap="anonymousFunc1">
+                                            <image src="{{iconRule}}" class="tab-rule-img"></image>
+                                            <view class="tab-text">组队规则</view>
+                                        </view>
+                                        <view class="tab-create" style="background-image: url(https://mpmall.huggiesapp.cn/storage/wxmall/another/detail_tabBar_06.png)" catchtap="anonymousFunc2">
+                                            <view class="tab-text">立即加入</view>
+                                        </view>
+                                        <view class="tab-join" style="background-image: url(https://mpmall.huggiesapp.cn/storage/wxmall/another/detail_tabBar_05.png)" catchtap="anonymousFunc3">
+                                            <view class="tab-text">我也要组队</view>
+                                        </view>
+                                    </view>
+                                </block>
+                            </block>
+                        </block>
+                        <block wx:else>
+                            <block>
+                                <block wx:if="{{role_status == 1}}">
+                                    <view class="tool-cn" wx:key="we-alse-create-team">
+                                        <view class="tab-rule" catchtap="anonymousFunc4">
+                                            <image src="{{iconRule}}" class="tab-rule-img"></image>
+                                            <view class="tab-text">组队规则</view>
+                                        </view>
+                                        <view class="tab-create-also" style="background-image: url(https://mpmall.huggiesapp.cn/storage/wxmall/another/detail_tabBar_06.png)" catchtap="anonymousFunc5">
+                                            <view class="tab-text">我也要组队</view>
+                                        </view>
+                                    </view>
+                                </block>
+                                <block wx:else>
+                                    <view class="tool-cn" wx:key="btn-reback-home">
+                                        <view class="tab-rehome" style="background-image: url(https://mpmall.huggiesapp.cn/storage/wxmall/another/detail_tabBar_06.png)" catchtap="anonymousFunc6">
+                                            <view class="tab-text">返回首页</view>
+                                        </view>
+                                    </view>
+                                </block>
+                            </block>
+                        </block>
+                    </block>
+                </view>
+            </view>
+        </view>
+        <rule-dialog __triggerObserer="{{ _triggerObserer }}"></rule-dialog>
+    </view>
+</block>

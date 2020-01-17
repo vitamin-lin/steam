@@ -1,0 +1,10 @@
+<block>
+    <view class="wrap">
+        <view class="headPic">
+            <open-data type="userAvatarUrl" __triggerObserer="{{ _triggerObserer }}"></open-data>
+        </view>
+        <view class="nick">
+            <open-data type="userNickName" __triggerObserer="{{ _triggerObserer }}"></open-data>
+        </view>
+    </view>
+</block>

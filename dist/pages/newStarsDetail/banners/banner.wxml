@@ -1,0 +1,36 @@
+<block>
+    <view class="banner">
+        <swiper class="test-h" indicator-color="#999" indicator-active-color="#333" circular="{{true}}" indicator-dots="{{true}}" autoplay="{{true}}" style="{{anonymousState__temp}}">
+            <swiper-item wx:key="key" class="test-h" wx:for="{{$anonymousCallee__0}}" wx:for-item="key" wx:for-index="_anonIdx">
+                <image src="{{key}}" mode="widthFix" bindload="onLoad"></image>
+            </swiper-item>
+        </swiper>
+        <view class="pic">
+            <view class="tite">{{title}}</view>
+            <view class="special">
+                <view class="headPic">
+                    <image src="{{avatar_image_path}}" mode="widthFix"></image>
+                    <view class="nick">{{nickname}}</view>
+                </view>
+                <image src="{{heart}}" mode="widthFix" class="hearts"></image><text class="nums">{{like}}</text>
+                <image src="{{share}}" mode="widthFix" class="share"></image>
+            </view>
+            <view class="share" bindtap="funPrivatexwHQQ" data-e-tap-so="this" data-e-tap-a-a="{{goods[0].id}}"></view>
+            <view wx:key="keys" wx:for="{{goods}}" wx:for-item="keys" wx:for-index="_anonIdx2">
+                <view class="linkToDetail" bindtap="linkToDetail" data-e-tap-so="this" data-e-tap-a-a="{{keys.id}}" data-e-tap-a-b="{{id}}">
+                    <view class="leftpic">
+                        <image src="{{keys.thumbnail_path}}" mode="widthFix" class="hearts"></image>
+                    </view>
+                    <view class="tits">{{keys.name}}</view>
+                    <image src="{{icona}}" mode="widthFix" class="icona"></image>
+                </view>
+            </view>
+            <view class="details">
+                <image src="{{content_image_path}}" mode="widthFix"></image>
+            </view>
+            <view class="times">发布于{{anonymousState__temp2}}
+                <image src="{{lines}}" mode="widthFix"></image>
+            </view>
+        </view>
+    </view>
+</block>

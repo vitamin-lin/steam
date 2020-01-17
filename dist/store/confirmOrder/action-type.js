@@ -1,0 +1,16 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var POST_ORDER = exports.POST_ORDER = 'POST_ORDER';
+var REQ_PAY = exports.REQ_PAY = 'REQ_PAY';
+var PAY_SUC = exports.PAY_SUC = 'PAY_SUC';
+var PAY_FAIL = exports.PAY_FAIL = 'PAY_FAIL';
+var PAY_STATUS = exports.PAY_STATUS = 'PAY_STATUS';
+var GET_ADDRESS = exports.GET_ADDRESS = 'GET_ADDRESS';
+var GET_GOODS_PRICE = exports.GET_GOODS_PRICE = 'GET_GOODS_PRICE';
+var CHANGE_USER_GOODS = exports.CHANGE_USER_GOODS = 'CHANGE_USER_GOODS';
+var CHANGE_USER_GOODS_FROM_DETAIL = exports.CHANGE_USER_GOODS_FROM_DETAIL = 'CHANGE_USER_GOODS_FROM_DETAIL';
+var CHANGE_BUY_TYPE = exports.CHANGE_BUY_TYPE = 'CHANGE_BUY_TYPE';
+var SHOW_ERROR_DIALOG = exports.SHOW_ERROR_DIALOG = 'SHOW_ERROR_DIALOG';

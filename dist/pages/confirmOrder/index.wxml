@@ -1,0 +1,96 @@
+<block>
+    <view class="page-wrap">
+        <at-toast isOpened="{{isToastVisible}}" __triggerObserer="{{ _triggerObserer }}" text="{{toastText}}" status="{{toastType}}" icon="alert-circle"></at-toast>
+        <address-wrap userAddrss="{{userAddrss}}" __triggerObserer="{{ _triggerObserer }}" bindonclickaddressinfo="onClickAddressInfo" __fn_onClickAddressInfo="{{true}}"></address-wrap>
+        <form report-submit="{{true}}" bindsubmit="anonymousFunc0">
+            <view class="order-wrap">
+                <view class="good-list">
+                    <view class="good-item" wx:key="goodInfo.id" wx:for="{{loopArray0}}" wx:for-item="g" wx:for-index="index">
+                        <view class="good-top">
+                            <view class="thumbnail-wrap">
+                                <image class="thumbnail-pic" mode="widthFix" src="{{g.goodInfo.thumbnail_path}}"></image>
+                            </view>
+                            <view class="good-tit">
+                                <view class="good-name">{{g.goodInfo.name + g.goodInfo.size + '型号' + g.goodInfo.piece + '片'}}</view>
+                                <view class="good-price">￥{{g.$loopState__temp2}}</view>
+                                <view class="good-numb lab-item">
+                                    <view class="lab-tit">购买数量</view>
+                                    <view class="lab-cn">
+                                        <at-input-number min="{{g.teamPrice ? g.goodInfo.buy_count : 1}}" __triggerObserer="{{ _triggerObserer }}" max="{{100000}}" step="{{1}}" value="{{g.goodNum}}" disabled="{{g.goodInfo.is_limited_sale == 1 ? true : false}}" bindonchange="handleInputNumberChange" __fn_onChange="{{true}}" data-e-onchange-so="this" data-e-onchange-a-a="{{index}}"></at-input-number>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="good-type">
+                            <view class="lab-item">
+                                <view class="lab-tit">型号</view>
+                                <view class="lab-cn">
+                                    <at-tag name="{{t.id}}" __triggerObserer="{{ _triggerObserer }}" wx:key="id" type="primary" active="{{t.id == g.curType.id ? true : false}}" bindonclick="onClickTypeTag" wx:for="{{g.typeTags}}" wx:for-item="t" wx:for-index="_anonIdx" __fn_onClick="{{true}}" data-e-onclick-so="this" data-e-onclick-a-a="{{index}}">{{t.tit}}</at-tag>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="discount-wrap">
+                    <view class="gift">
+                        <block wx:if="{{!(limt && goodArrLeg == 1) && selectable}}">
+                            <view class="toCou">
+                                <view class="checked" bindtap="handleFOGClick">
+                                    <block wx:if="{{anonymousState__temp9}}">
+                                        <image src="{{right}}" mode="widthFix"></image>
+                                    </block>
+                                </view>
+                                <view class="gifyTxt">下单即送免费定制口水巾<text>*单独发货（预计7个工作日发出）</text>
+                                </view>
+                            </view>
+                        </block>
+                        <block wx:if="{{anonymousState__temp10}}">
+                            <view class="giftName">
+                                <at-input placeholder="请输入宝宝姓名（10个字符以内哦）" __triggerObserer="{{ _triggerObserer }}" bindonchange="changeInput" value="{{InputVal}}" maxLength="{{anonymousState__temp3}}" __fn_onChange="{{true}}" data-e-onchange-so="this"></at-input>
+                                <view class="errTip">{{erroTip}}</view>
+                            </view>
+                        </block>
+                    </view>
+                    <view class="{{usealbeCouponCBox ? 'coupon gift' : 'coupon gift disable'}}">
+                        <block wx:if="{{!(limt && goodArrLeg == 1)}}">
+                            <view class="toCou">
+                                <view class="checked" bindtap="handleDiscountCouponClick">
+                                    <block wx:if="{{anonymousState__temp11}}">
+                                        <image src="{{right}}" mode="widthFix"></image>
+                                    </block>
+                                </view>
+                                <view class="gifyTxt">优惠券</view>
+                                <view class="right-handle" catchtap="anonymousFunc1"><text class="coupon-info">{{anonymousState__temp4}}</text><text class="coupon-more">•••</text>
+                                </view>
+                            </view>
+                        </block>
+                    </view>
+                </view>
+                <view class="send-info">
+                    <view class="send-add">发货：上海</view>
+                    <view class="post">快递：{{anonymousState__temp5}}</view>
+                </view>
+                <view class="tip-text">*购物支付满199即可包邮</view>
+                <block wx:if="{{tPrice.discount !== ''}}">
+                    <view class="copunds">
+                        <view class="l-cn">优惠</view>
+                        <view class="r-cn">{{tPrice.discount}}</view>
+                    </view>
+                </block>
+                <view class="total-price lrItem">
+                    <view class="l-cn">共 {{totalGNum ? totalGNum : 0}}件</view>
+                    <view class="r-cn">合计<text class="num">￥{{anonymousState__temp6}}</text>
+                    </view>
+                </view>
+            </view>
+            <view class="{{isIphoneX ? 'fix-footer' : 'fix-footer noipx'}}">
+                <view class="footer-cn">
+                    <view class="total-num">￥{{anonymousState__temp7}}</view>
+                    <button class="pay-btn" form-type="submit">提交订单</button>
+                </view>
+            </view>
+        </form>
+        <coupon-list couponList="{{coupon_list.length > 0 ? coupon_list : []}}" __triggerObserer="{{ _triggerObserer }}" curCouponId="{{anonymousState__temp8}}" isOpened="{{visibleCouponList}}" bindoncouponitemselectchange="handleCouponItemSelectChange" bindoncouponlistclose="handleCouponListClose" __fn_onCouponItemSelectChange="{{true}}" __fn_onCouponListClose="{{true}}"></coupon-list>
+        <alert-dialog errTip="{{errTip}}" __triggerObserer="{{ _triggerObserer }}" alert="{{alert}}" bindoncloseerrdialogtip="closeErrDialogTip" bindonclosealert="closeAlert" className="kmDialog" __fn_onCloseErrDialogTip="{{true}}" __fn_onCloseAlert="{{true}}"></alert-dialog>
+    </view>
+</block>

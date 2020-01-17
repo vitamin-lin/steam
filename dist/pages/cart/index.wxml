@@ -1,0 +1,15 @@
+<block>
+    <view class="box">
+        <block>
+            <block wx:if="{{type}}">
+                <view class="success">
+                    <image mode="widthFix" src="https://mpmall.huggiesapp.cn/storage/wxmall/another/paySucess.png"></image>
+                </view>
+            </block>
+            <block wx:else>
+                <cart-list list="{{list}}" __triggerObserer="{{ _triggerObserer }}"></cart-list>
+            </block>
+        </block>
+        <waterfall-flow data="{{anonymousState__temp}}" __triggerObserer="{{ _triggerObserer }}"></waterfall-flow>
+    </view>
+</block>

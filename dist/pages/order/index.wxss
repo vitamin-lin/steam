@@ -1,0 +1,103 @@
+
+.order {
+  position: relative;
+  color: #000;
+  padding-top: 27rpx;
+  overflow-y: scroll;
+  height: 100vh;
+  margin: 0 auto;
+  -webkit-overflow-scrolling: touch;
+  font-size: 23rpx; }
+  .order .tits {
+    width: 100%;
+    height: 38rpx;
+    background: #f4f4f4;
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 13; }
+  .order .fc {
+    width: 694rpx;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 111rpx;
+    z-index: 10;
+    margin: 0 auto;
+    font-size: 24rpx;
+    background: #fff;
+    border-radius: 20rpx; }
+  .order .tabs {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 26rpx;
+    z-index: 15; }
+    .order .tabs .lines {
+      width: 636rpx;
+      margin: 0 auto;
+      padding-bottom: 27rpx;
+      background: #fff;
+      border-bottom: 2rpx solid #ccc; }
+    .order .tabs .at-tabs__header {
+      width: 694rpx;
+      margin: 0 auto;
+      font-size: 20rpx;
+      background: #fff;
+      padding-left: 10rpx;
+      padding-right: 10rpx;
+      border-radius: 20rpx;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+      -webkit-box-shadow: 0 2rpx 20rpx #e3e3e3;
+              box-shadow: 0 2rpx 20rpx #e3e3e3;
+      position: relative;
+      padding-left: 20rpx;
+      font-weight: 600; }
+      .order .tabs .at-tabs__header .at-tabs__item {
+        padding-top: 49rpx;
+        font-size: 23rpx;
+        padding-left: 20rpx;
+        padding-right: 20rpx; }
+      .order .tabs .at-tabs__header .at-tabs__item:nth-child(1) {
+        -webkit-box-flex: 0;
+        -webkit-flex: none;
+            -ms-flex: none;
+                flex: none; }
+      .order .tabs .at-tabs__header .at-tabs__item--active {
+        color: #e60012; }
+      .order .tabs .at-tabs__header .at-tabs__item-underline {
+        display: none; }
+    .order .tabs .at-tabs-pane {
+      width: 694rpx;
+      margin: 0 auto;
+      display: none; }
+    .order .tabs .at-tabs__item {
+      padding: 20rpx 14rpx; }
+  .order .order_box {
+    width: 694rpx;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    margin-bottom: 80rpx;
+    padding-top: 57rpx; }
+    .order .order_box .main {
+      width: 694rpx;
+      min-height: 460rpx;
+      background: #fff;
+      margin: 0 auto;
+      border-radius: 20rpx;
+      -webkit-box-shadow: 0 2rpx 20rpx #e3e3e3;
+              box-shadow: 0 2rpx 20rpx #e3e3e3;
+      margin-bottom: 80rpx;
+      margin-top: 110rpx; }
+      .order .order_box .main .more {
+        width: 392rpx;
+        height: 90rpx;
+        margin: 0 auto;
+        position: relative;
+        bottom: 80rpx; }
+        .order .order_box .main .more image {
+          width: 100%; }

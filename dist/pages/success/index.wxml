@@ -1,0 +1,8 @@
+<block>
+    <view class="box">
+        <view class="success">
+            <image mode="widthFix" src="https://mpmall.huggiesapp.cn/storage/wxmall/another/paySucess.png"></image>
+        </view>
+        <waterfall-flow data="{{_params}}" __triggerObserer="{{ _triggerObserer }}"></waterfall-flow>
+    </view>
+</block>

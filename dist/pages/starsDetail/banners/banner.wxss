@@ -1,0 +1,110 @@
+
+.banner {
+  width: 694rpx;
+  min-height: 1200rpx;
+  background: #fff;
+  margin: 0 auto;
+  -webkit-box-shadow: 0 2rpx 20rpx #e3e3e3;
+          box-shadow: 0 2rpx 20rpx #e3e3e3;
+  position: relative;
+  top: 28rpx;
+  margin-bottom: 60rpx;
+  border-radius: 20rpx; }
+  .banner image {
+    width: 694rpx;
+    border-radius: 20rpx 20rpx 0 0;
+    display: block; }
+  .banner .test-h {
+    border-radius: 20rpx 20rpx 0 0; }
+
+.details {
+  background: #fff;
+  margin: 0 auto; }
+  .details Image {
+    display: block;
+    width: 611rpx;
+    margin: 0 auto;
+    border-radius: 0; }
+
+.pic {
+  background: #fff;
+  padding-bottom: 50rpx;
+  min-height: 800rpx;
+  padding-top: 35rpx;
+  margin-bottom: 60rpx;
+  border-radius: 0 0 20rpx 20rpx;
+  position: relative; }
+
+.heart {
+  width: 96rpx;
+  height: 24rpx;
+  position: absolute;
+  top: 90rpx;
+  left: 315rpx; }
+  .heart Image {
+    width: 23rpx;
+    height: 23rpx;
+    float: left; }
+  .heart Text {
+    height: 24rpx;
+    font-size: 23rpx;
+    line-height: 25rpx;
+    float: left;
+    margin-left: 6rpx; }
+
+.heartID {
+  width: 96rpx;
+  height: 24rpx;
+  position: absolute;
+  top: 108rpx;
+  left: 315rpx; }
+  .heartID Image {
+    width: 23rpx;
+    height: 23rpx;
+    float: left; }
+  .heartID Text {
+    height: 24rpx;
+    font-size: 23rpx;
+    line-height: 25rpx;
+    float: left;
+    margin-left: 6rpx; }
+
+.share {
+  width: 200rpx;
+  height: 150rpx;
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.linkToDetail {
+  width: 694rpx;
+  height: 150rpx;
+  position: absolute;
+  top: 160rpx;
+  z-index: 10; }
+
+.linkWrap {
+  position: absolute;
+  top: 150rpx; }
+
+.linkToDetails {
+  width: 694rpx;
+  height: 120rpx;
+  margin-bottom: 20rpx;
+  position: relative;
+  z-index: 10; }
+
+.special {
+  position: relative; }
+  .special .hearts {
+    width: 23rpx;
+    height: 23rpx;
+    position: absolute;
+    top: 3rpx;
+    left: 410rpx; }
+  .special Text {
+    height: 24rpx;
+    font-size: 23rpx;
+    position: absolute;
+    top: 0;
+    left: 440rpx; }

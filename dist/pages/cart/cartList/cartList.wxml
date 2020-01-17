@@ -1,0 +1,36 @@
+<block>
+    <block>
+        <block wx:if="{{list.length === 0}}">
+            <view class="carPic">
+                <view class="links" bindtap="toLink" data-e-tap-so="this"></view>
+                <image mode="widthFix" src="{{carPic}}"></image>
+            </view>
+        </block>
+        <block wx:else>
+            <view class="wrap">
+                <view class="orderList" wx:key="index" wx:for="{{loopArray0}}" wx:for-item="item" wx:for-index="index">
+                    <view class="titModal"></view>
+                    <view class="checks" bindtap="changeCheck" data-e-tap-so="this" data-e-tap-a-a="{{index}}">
+                        <block wx:if="{{item.$loopState__temp4}}">
+                            <image mode="widthFix" src="{{checked}}"></image>
+                        </block>
+                    </view>
+                    <view class="headers">
+                        <view class="del" bindtap="del" data-e-tap-so="this" data-e-tap-a-a="{{item.$original}}">删除</view>
+                        <view class="pic">
+                            <image mode="widthFix" src="{{item.$original.thumbnail_path}}"></image>
+                        </view>
+                        <view class="txts">
+                            <view class="titHead">{{item.$original.name + item.$original.size + '型号' + item.$original.piece + '片'}}</view>
+                            <view class="money"><text class="much">¥ {{item.$loopState__temp2}}</text><text class="nums">x {{item.$original.number}}</text>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class="btn" bindtap="pay">
+                    <image mode="widthFix" src="{{paybtn}}"></image>
+                </view>
+            </view>
+        </block>
+    </block>
+</block>

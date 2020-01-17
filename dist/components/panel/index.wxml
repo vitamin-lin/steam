@@ -1,0 +1,12 @@
+<block>
+    <view class="{{rootCls}}">
+        <navigator url="{{url}}" hover-class="None" open-type="switchTab">
+            <view class="my-panel-header at-row at-row__align--center">
+                <view class="at-col">{{title}}</view><text class="my-panel-header__arrow at-icon at-icon-chevron-right at-col"></text>
+            </view>
+        </navigator>
+        <view class="my-panel-body">
+            <slot></slot>
+        </view>
+    </view>
+</block>

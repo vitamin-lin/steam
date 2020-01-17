@@ -1,0 +1,56 @@
+<block>
+    <view class="couponList-wrap">
+        <view class="{{isOpened ? 'at-float-layout at-float-layout--active' : 'at-float-layout'}}" catchtouchmove="anonymousFunc1">
+            <view class="at-float-layout__overlay"></view>
+            <view class="at-float-layout__container layout">
+                <view class="layout-header"><text class="taro-text layout-header__title">优惠券</text>
+                    <view class="layout-header__btn-close" catchtap="anonymousFunc2">
+                        <image src="{{iconClose}}" class="icon-close"></image>
+                    </view>
+                </view>
+                <view class="layout-body">
+                    <scroll-view scroll-y="{{true}}" class="taro-scroll taro-scroll-view__scroll-y layout-body__content">
+                        <block>
+                            <block wx:if="{{couponList.length <= 0}}">
+                                <view class="no-coupon-tip">—暂无优惠券—</view>
+                            </block>
+                            <block wx:else>
+                                <view class="couponList-cn">
+                                    <view class="coupon-info">您已选中优惠券{{curCouponId == '0' ? '0' : '1'}}张,共可抵<text class="c-money">￥{{anonymousState__temp}}</text>
+                                    </view>
+                                    <view class="couponList">
+                                        <block>
+                                            <block wx:if="{{couponList && couponList.length > 0}}">
+                                                <view wx:key="id" class="{{'couponItem ' + (curCouponId == cItem.id ? 'checked' : '') + ' ' + (cItem.use_status == 1 ? '' : 'disable')}}" catchtap="anonymousFunc0" wx:for="{{loopArray0}}" wx:for-item="cItem" wx:for-index="__index0" data-e-tap-so="this" data-e-tap-a-a="{{__index0}}">
+                                                    <view class="icon-statue">
+                                                        <image src="{{iconCheck}}" class="icon-check"></image>
+                                                    </view>
+                                                    <view class="l-cn">
+                                                        <view class="l-cn-bg"></view>
+                                                        <block>
+                                                            <block wx:if="{{cItem.type == '3'}}">
+                                                                <view class="c-v">{{cItem.discount / 10}}折</view>
+                                                            </block>
+                                                            <block wx:else>
+                                                                <view class="c-v"><text class="c-m">￥</text>{{cItem.strDiscount}}</view>
+                                                            </block>
+                                                        </block>
+                                                    </view>
+                                                    <view class="r-cn">
+                                                        <view class="c-name">{{cItem.name}}</view>
+                                                        <view class="c-exp">
+                                                            <image src="{{iconTime}}" class="icon-time"></image>有效期 {{cItem.date_start}}~{{cItem.date_end}}</view>
+                                                    </view>
+                                                </view>
+                                            </block>
+                                        </block>
+                                    </view>
+                                </view>
+                            </block>
+                        </block>
+                    </scroll-view>
+                </view>
+            </view>
+        </view>
+    </view>
+</block>

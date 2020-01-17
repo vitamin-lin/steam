@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "curtain": "../../components/curtain/index",
+    "fc-dialog": "../../components/fcDialog/index"
+  },
+  "navigationBarTitleText": "好奇官方精品商城"
+}

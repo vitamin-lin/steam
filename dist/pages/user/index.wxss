@@ -1,0 +1,103 @@
+
+.user {
+  position: relative;
+  color: #000;
+  padding-bottom: 60rpx; }
+  .user .user_box {
+    width: 694rpx;
+    height: 1245rpx;
+    min-height: 1200rpx;
+    background: #fff;
+    margin: 0 auto;
+    border-radius: 20rpx;
+    -webkit-box-shadow: 0 2rpx 20rpx #e3e3e3;
+            box-shadow: 0 2rpx 20rpx #e3e3e3;
+    background: #fff; }
+    .user .user_box .noLogin {
+      width: 634rpx;
+      height: 300rpx;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 300rpx;
+      margin: 0 auto;
+      z-index: 10; }
+  .user .panel_top {
+    width: 634rpx;
+    margin-top: 10rpx;
+    margin: 0 auto; }
+    .user .panel_top .my-panel-header {
+      border-bottom: 2rpx solid #e5e5e5;
+      padding-top: 30rpx;
+      padding-bottom: 30rpx; }
+    .user .panel_top .my-panel-body {
+      display: none; }
+  .user .address .at-list__item {
+    border-bottom: 2rpx solid #e5e5e5; }
+  .user .address .at-list__item--thumb .item-thumb {
+    width: 38rpx;
+    height: 38rpx; }
+  .user .address .at-list__item .item-extra__icon-arrow {
+    color: #000;
+    font-size: 28rpx; }
+  .user .address .at-list__item .item-content__info-title {
+    font-size: 24rpx;
+    font-weight: 600; }
+  .user .panel_first {
+    border-top: 0;
+    margin-top: 56rpx;
+    border-bottom: 2rpx solid #e5e5e5;
+    font-weight: 600;
+    font-size: 18rpx; }
+    .user .panel_first .my-panel-body {
+      display: block; }
+  .user .verCode {
+    width: 585rpx;
+    height: 518rpx;
+    margin: 0 auto;
+    margin-top: 31rpx;
+    font-size: 24rpx;
+    font-weight: 600; }
+    .user .verCode .codeHeader {
+      width: 571rpx; }
+      .user .verCode .codeHeader Text {
+        height: 38rpx;
+        line-height: 38rpx;
+        display: block;
+        float: left; }
+      .user .verCode .codeHeader .erweima {
+        width: 38rpx;
+        height: 38rpx;
+        margin-right: 27rpx;
+        float: left; }
+      .user .verCode .codeHeader .codePic {
+        width: 410rpx;
+        height: 410rpx;
+        margin: 0 auto;
+        display: block;
+        top: 40rpx;
+        position: relative; }
+
+.panels {
+  width: 634rpx;
+  height: 70rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 270rpx;
+  margin: 0 auto;
+  z-index: 12; }
+
+.getUser {
+  width: 100%;
+  background: orange;
+  position: absolute;
+  z-index: 1000;
+  left: 0;
+  right: 0;
+  top: 240rpx;
+  margin: 0 auto;
+  opacity: 0; }
+  .getUser Button {
+    height: 265rpx;
+    line-height: 265rpx; }

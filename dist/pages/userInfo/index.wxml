@@ -1,0 +1,10 @@
+<block>
+    <view class="wrap" style="background:url(https://mpmall.huggiesapp.cn/storage/wxmall/another/loginBg.jpg) no-repeat;background-size: 100% auto;">
+        <view class="login">
+            <image src="https://mpmall.huggiesapp.cn/storage/wxmall/another/loginAlert.png" mode="widthFix"></image>
+            <view class="btn">
+                <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" type="text">微信登陆</button>
+            </view>
+        </view>
+    </view>
+</block>

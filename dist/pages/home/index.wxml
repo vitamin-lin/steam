@@ -1,0 +1,152 @@
+<block>
+    <view class="page-wrap" style="{{anonymousState__temp}}">
+        <curtain data="{{_params}}" __triggerObserer="{{ _triggerObserer }}" path="{{$router}}" bindonchangestaus="onChangeStaus" mid="{{mid}}" __fn_onChangeStaus="{{true}}"></curtain>
+        <view class="{{anonymousState__temp2}}">
+            <view class="floating">
+                <view class="popper">
+                    <view class="left icon-lucky-money">¥</view>
+                    <view class="left">
+                        <view>优惠券已放入个人中心</view>
+                        <view>记得使用哦~</view>
+                    </view>
+                    <view class="arrow arrow-bottom" style="{{anonymousState__temp3}}"></view>
+                </view>
+            </view>
+        </view>
+        <view class="{{anonymousState__temp4}}">
+            <view class="overlay"></view>
+            <view class="sun">
+                <view class="ray_box">
+                    <image class="img" src="{{imgSunray}}" mode="widthFix"></image>
+                </view>
+            </view>
+            <view class="package">
+                <image class="img" src="{{imgLucky}}" mode="widthFix"></image>
+            </view>
+        </view>
+        <form report-submit="{{true}}" bindsubmit="anonymousFunc2">
+            <button form-type="submit">
+                <view class="zudui" bindtap="openDia">
+                    <image src="{{zudui}}"></image>
+                </view>
+            </button>
+        </form>
+        <block wx:if="{{dialogs}}">
+            <fc-dialog bindonclosedia="onCloseDia" __triggerObserer="{{ _triggerObserer }}" __fn_onCloseDia="{{true}}"></fc-dialog>
+        </block>
+        <view class="icons">
+            <image src="{{down}}" class="top"></image>
+        </view>
+        <form report-submit="{{true}}" bindsubmit="anonymousFunc3">
+            <view class="cs-wrap" bindtap="clickCs">
+                <button class="cs-cn" open-type="contact" form-type="submit">
+                    <image src="{{iconCS}}" mode="widthFix" class="cs-icon"></image>
+                </button>
+            </view>
+        </form>
+        <swiper class="index-swiper" indicator-color="#999" indicator-active-color="#333" interval="3000" circular="{{true}}" autoplay="{{true}}">
+            <swiper-item wx:key="$original.id" wx:for="{{loopArray0}}" wx:for-item="b" wx:for-index="__index0">
+                <form report-submit="{{true}}" bindsubmit="anonymousFunc0" data-e-submit-so="this" data-e-submit-a-a="{{__index0}}">
+                    <view class="index-swiper__item" catchtap="anonymousFunc1" data-e-tap-so="this" data-e-tap-a-a="{{__index0}}">
+                        <image src="{{b.$original.banner_image_url}}" class="index-swiper__itemImg"></image>
+                        <button class="cover-form-id" form-type="submit"></button>
+                    </view>
+                </form>
+            </swiper-item>
+        </swiper>
+        <view class="camp-wrap">
+            <view class="camp">
+                <view class="at-row">
+                    <form report-submit="{{true}}" bindsubmit="anonymousFunc4" class="at-col at-col-6">
+                        <image src="https://mpmall.huggiesapp.cn/storage/wxmall/another/campNew.jpg" class="camp-img" mode="widthFix" bindtap="linkPage" data-e-tap-so="this">
+                            <button form-type="submit" class="btn-sbmt"></button>
+                        </image>
+                    </form>
+                    <form report-submit="{{true}}" bindsubmit="anonymousFunc5" class="at-col at-col-6 at-col-nth">
+                        <image src="{{camp2}}" class="camp-img" mode="widthFix" bindtap="anonymousFunc6">
+                            <button form-type="submit" class="btn-sbmt"></button>
+                        </image>
+                    </form>
+                </view>
+            </view>
+        </view>
+        <view class="divider-wrap">
+            <image class="divider-img" mode="widthFix" src="https://mpmall.huggiesapp.cn/storage/wxmall/another/camp_tit_04.jpg"></image>
+        </view>
+        <view class="re-selection">
+            <view class="good-item-list">
+                <block>
+                    <block wx:if="{{!cata1Goods}}">
+                        <view class="no-tip">暂无数据</view>
+                    </block>
+                    <block wx:else>
+                        <form wx:key="$original.id" report-submit="{{true}}" bindsubmit="anonymousFunc7" wx:for="{{loopArray2}}" wx:for-item="g" wx:for-index="__index7" data-e-submit-so="this" data-e-submit-a-a="{{__index7}}">
+                            <view class="good-item" catchtap="anonymousFunc8" data-e-tap-so="this" data-e-tap-a-a="{{__index7}}">
+                                <image src="{{g.$original.banner_image_url}}" class="good-item-img"></image>
+                                <view class="good-item-cn">
+                                    <view class="good-item-tit">{{g.$original.title}}</view>
+                                    <view class="good-item-profile">{{g.$original.description}}</view>
+                                    <view class="good-item-price">¥{{g.$loopState__temp6}}</view>
+                                    <view class="good-item-oprice">¥{{g.$loopState__temp8}}</view>
+                                </view>
+                                <button class="cover-form-id" form-type="submit"></button>
+                            </view>
+                        </form>
+                    </block>
+                </block>
+            </view>
+        </view>
+        <view class="divider-wrap">
+            <image class="divider-img" mode="widthFix" src="https://mpmall.huggiesapp.cn/storage/wxmall/another/camp_tit_07.jpg"></image>
+        </view>
+        <view class="re-selection">
+            <view class="good-item-list">
+                <block>
+                    <block wx:if="{{!cata2Goods}}">
+                        <view class="no-tip">暂无数据</view>
+                    </block>
+                    <block wx:else>
+                        <form wx:key="$original.id" report-submit="{{true}}" bindsubmit="anonymousFunc9" wx:for="{{loopArray4}}" wx:for-item="g" wx:for-index="__index9" data-e-submit-so="this" data-e-submit-a-a="{{__index9}}">
+                            <view class="good-item" catchtap="anonymousFunc10" data-e-tap-so="this" data-e-tap-a-a="{{__index9}}">
+                                <image src="{{g.$original.banner_image_url}}" class="good-item-img"></image>
+                                <view class="good-item-cn">
+                                    <view class="good-item-tit">{{g.$original.title}}</view>
+                                    <view class="good-item-profile">{{g.$original.description}}</view>
+                                    <view class="good-item-price">¥{{g.$loopState__temp10}}</view>
+                                    <view class="good-item-oprice">¥{{g.$loopState__temp12}}</view>
+                                </view>
+                                <button class="cover-form-id" form-type="submit"></button>
+                            </view>
+                        </form>
+                    </block>
+                </block>
+            </view>
+        </view>
+        <view class="divider-wrap">
+            <image class="divider-img" mode="widthFix" src="https://mpmall.huggiesapp.cn/storage/wxmall/another/camp_tit_09.jpg"></image>
+        </view>
+        <view class="re-selection">
+            <view class="good-item-list">
+                <block>
+                    <block wx:if="{{!cata5Goods}}">
+                        <view class="no-tip">暂无数据</view>
+                    </block>
+                    <block wx:else>
+                        <form wx:key="$original.id" report-submit="{{true}}" bindsubmit="anonymousFunc11" wx:for="{{loopArray6}}" wx:for-item="g" wx:for-index="__index11" data-e-submit-so="this" data-e-submit-a-a="{{__index11}}">
+                            <view class="good-item" catchtap="anonymousFunc12" data-e-tap-so="this" data-e-tap-a-a="{{__index11}}">
+                                <image src="{{g.$original.banner_image_url}}" class="good-item-img"></image>
+                                <view class="good-item-cn">
+                                    <view class="good-item-tit">{{g.$original.title}}</view>
+                                    <view class="good-item-profile">{{g.$original.description}}</view>
+                                    <view class="good-item-price">¥{{g.$loopState__temp14}}</view>
+                                    <view class="good-item-oprice">¥{{g.$loopState__temp16}}</view>
+                                </view>
+                                <button class="cover-form-id" form-type="submit"></button>
+                            </view>
+                        </form>
+                    </block>
+                </block>
+            </view>
+        </view>
+    </view>
+</block>

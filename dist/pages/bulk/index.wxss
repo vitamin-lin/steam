@@ -1,0 +1,93 @@
+
+@charset "UTF-8";
+.wrap {
+  min-height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding-top: 25rpx; }
+
+.boxs {
+  width: 694rpx;
+  min-height: 266rpx;
+  margin: 0 auto;
+  padding-top: 25rpx; }
+
+.box {
+  width: 694rpx;
+  height: 266rpx;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 15rpx;
+  -webkit-box-shadow: 0 2rpx 20rpx #e3e3e3;
+          box-shadow: 0 2rpx 20rpx #e3e3e3;
+  margin-bottom: 35rpx;
+  position: relative;
+  z-index: 10;
+  top: 36rpx; }
+  .box .leftPic {
+    width: 185rpx;
+    height: 185rpx;
+    position: absolute;
+    left: 43rpx;
+    top: 40rpx;
+    text-align: center;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    /*容器为伸缩盒*/
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    /*纵轴方向上的对齐方式设置为居中*/ }
+    .box .leftPic image {
+      width: 152rpx;
+      height: 152rpx;
+      margin: 0 auto; }
+  .box .rightTxt {
+    width: 359rpx;
+    position: absolute;
+    right: 62rpx;
+    top: 90rpx;
+    word-break: break-all;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
+    display: -webkit-box;
+    /** 对象作为伸缩盒子模型显示 **/
+    -webkit-box-orient: vertical;
+    /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+    -webkit-line-clamp: 2;
+    /** 显示的行数 **/
+    overflow: hidden;
+    font-size: 24rpx;
+    line-height: 37rpx; }
+    .box .rightTxt Text {
+      color: #b3846b; }
+  .box .look {
+    width: 125rpx;
+    height: 43rpx;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 39rpx;
+    right: 46rpx; }
+    .box .look image {
+      width: 125rpx;
+      height: 43rpx; }
+
+.feat {
+  width: 285rpx;
+  height: 210rpx;
+  margin: 0 auto;
+  margin-bottom: 40rpx;
+  margin-top: 35rpx;
+  position: relative; }
+  .feat image {
+    width: 285rpx;
+    height: 210rpx; }
+  .feat .btn {
+    width: 255rpx;
+    height: 80rpx;
+    position: absolute;
+    bottom: 0; }

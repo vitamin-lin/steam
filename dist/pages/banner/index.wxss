@@ -1,0 +1,38 @@
+
+.page-wrap {
+  min-height: 100vh;
+  padding-top: 28rpx;
+  padding-bottom: 28rpx; }
+
+.banner-wrap {
+  width: 694rpx;
+  margin: 0 auto; }
+  .banner-wrap .banner-cn {
+    background: #fff;
+    width: 100%;
+    -webkit-box-shadow: 0 8rpx 8rpx 0 rgba(0, 0, 0, 0.13);
+            box-shadow: 0 8rpx 8rpx 0 rgba(0, 0, 0, 0.13);
+    border-radius: 20rpx;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30rpx;
+    max-height: 571rpx; }
+    .banner-wrap .banner-cn .banner-pic {
+      width: 694rpx;
+      height: 100%;
+      vertical-align: baseline; }
+    .banner-wrap .banner-cn .banner-d {
+      width: 387rpx;
+      height: 73rpx;
+      line-height: 73rpx;
+      font-size: 36rpx;
+      color: #626262;
+      padding-left: 30rpx;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      position: absolute;
+      right: 28rpx;
+      bottom: 32rpx;
+      border-radius: 10rpx;
+      background-color: rgba(255, 255, 255, 0.85); }

@@ -1,0 +1,94 @@
+<block>
+    <view class="wrap">
+        <block>
+            <block wx:if="{{list.length === 0}}">
+                <view class="carPic">
+                    <view class="links" bindtap="toLink"></view>
+                    <image mode="widthFix" src="{{carPic}}"></image>
+                </view>
+            </block>
+            <block wx:else>
+                <view class="orderList" wx:key="index" wx:for="{{loopArray1}}" wx:for-item="item" wx:for-index="index">
+                    <view class="headers">
+                        <view wx:key="indexs" wx:for="{{item.$original.goods}}" wx:for-item="e" wx:for-index="indexs">
+                            <view class="pic">
+                                <image mode="widthFix" src="{{e.thumbnail_path}}"></image>
+                            </view>
+                            <view class="txts">
+                                <view class="titHead">{{e.name + e.size + '型号' + e.piece + '片'}}</view>
+                                <view class="money"><text class="much">¥{{' '}}{{item.$original.is_group === 1 ? e.group_price / 100 : e.price / 100}}</text><text class="nums">x {{e.amount}}</text>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="textBox">
+                            <block wx:if="{{item.$original.first_gift}}">
+                                <view><text>免费定制口水巾（单独发货）：</text><text>x 1</text>
+                                </view>
+                            </block>
+                            <block wx:if="{{item.$original.first_gift}}">
+                                <view><text>定制口水巾宝宝姓名</text><text>{{item.$original.first_gift.gift_title}}</text>
+                                </view>
+                            </block>
+                            <view><text>商品总价：</text><text>¥ {{item.$original.total_price / 100}}</text>
+                            </view>
+                            <view><text>运费：</text><text>¥ {{item.$original.logistics_fee / 100}}</text>
+                            </view>
+                            <block wx:if="{{item.$original.coupon_discount}}">
+                                <view><text>优惠券：</text><text>¥ {{item.$original.coupon_discount / 100}}</text>
+                                </view>
+                            </block>
+                            <view><text>实付款：</text><text>¥ {{item.$original.pay_fee / 100}}</text>
+                            </view>
+                            <view bindtap="funPrivatedUZjQ" class="btn" style="{{item.$loopState__temp2}}" data-e-tap-so="this" data-e-tap-a-a="{{index}}">
+                                <image mode="widthFix" src="{{botom}}"></image>
+                            </view>
+                        </view>
+                        <view style="{{item.$loopState__temp4}}">
+                            <view class="details">
+                                <view>订单编号：{{item.$original.address.order_no}}</view>
+                                <view>创建时间：{{item.$original.created_at}}</view>
+                                <view>支付时间：{{!item.$original.paid_at ? '暂无' : item.$original.paid_at}}</view>
+                                <block wx:if="{{item.$original.is_group == 1}}">
+                                    <view>组队时间：{{!item.$original.grouped_at ? '暂无' : item.$original.grouped_at}}</view>
+                                </block>
+                                <view>商品发货时间：{{!item.$original.logistics && !item.$original.logistics.delivery_at ? '暂无' : item.$original.logistics.delivery_at}}</view>
+                                <block wx:if="{{item.$original.logistics && item.$original.logistics.logistics_name}}">
+                                    <view>服务快递：{{item.$original.logistics.logistics_name}}</view>
+                                </block>
+                                <block wx:if="{{item.$original.logistics && item.$original.logistics.logistics_no}}">
+                                    <view>商品快递单号：{{item.$original.logistics.logistics_no}}</view>
+                                </block>
+                                <block wx:if="{{item.$original.refund}}">
+                                    <view>退款时间：{{!item.$original.refund && !item.$original.refund.wx_success_at ? '暂无' : item.$original.refund.wx_success_at}}</view>
+                                </block>
+                            </view>
+                            <view class="address">
+                                <view>收货地址：</view>
+                                <view>{{item.$original.address.name}}
+                                    <view class="space"></view>{{item.$original.address.phone}}</view>
+                                <view>{{item.$original.address.province}}{{item.$original.address.city}}{{item.$original.address.district}}{{item.$original.address.address}}</view>
+                            </view>
+                            <view class="btn-wrap">
+                                <block wx:if="{{(keys == 0 || keys !== 0) && item.$original.is_group == 1 && (item.$original.status == '待分享' || item.$original.status == '待发货' || item.$original.status == '待收货' || item.$original.status == '已完成')}}">
+                                    <view class="pay" bindtap="goTuan" data-e-tap-so="this" data-e-tap-a-a="{{item.$original.order_no}}">查看组队结果</view>
+                                </block>
+                                <block wx:if="{{visibleReback}}">
+                                    <view class="pay reback" bindtap="handleRebackClick" data-e-tap-so="this" data-e-tap-a-a="{{item.$original}}">返 回</view>
+                                </block>
+                                <block wx:if="{{keys === 1 || keys === 0 && item.$original.status == '待付款'}}">
+                                    <view class="mesText" bindtap="makeSez">戳我开启订阅提醒</view>
+                                </block>
+                                <block wx:if="{{keys === 1 || keys === 0 && item.$original.status == '待付款'}}">
+                                    <view class="pay" bindtap="pay" data-e-tap-so="this" data-e-tap-a-a="{{item.$original.address.order_no}}" data-e-tap-a-b="{{item.$original}}">去支付</view>
+                                </block>
+                            </view>
+                            <view class="{{keys === 1 || keys === 0 && item.$original.status == '待付款' ? 'top' : 'tops'}}" bindtap="funPrivateBjmom" data-e-tap-so="this" data-e-tap-a-a="{{index}}">
+                                <image mode="widthFix" src="{{top}}"></image>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </block>
+    </view>
+</block>

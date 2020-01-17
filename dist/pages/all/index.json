@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "stars-flow": "../../components/all-pro/index"
+  },
+  "navigationBarTitleText": "全部商品"
+}

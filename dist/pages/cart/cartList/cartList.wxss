@@ -1,0 +1,211 @@
+
+@charset "UTF-8";
+.wrap {
+  width: 695rpx;
+  min-height: 332rpx;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 20rpx;
+  -webkit-box-shadow: 0 2rpx 20rpx #e3e3e3;
+          box-shadow: 0 2rpx 20rpx #e3e3e3;
+  margin-bottom: 67rpx;
+  margin-top: 39rpx;
+  padding-bottom: 46rpx; }
+  .wrap .btn {
+    width: 280rpx;
+    height: 60rpx;
+    margin: 0 auto;
+    margin-top: 37rpx; }
+    .wrap .btn image {
+      width: 100%;
+      margin: 0 auto;
+      display: block; }
+
+.carPic {
+  width: 244rpx;
+  height: 196rpx;
+  z-index: 100;
+  margin: 0 auto;
+  margin-top: 70rpx;
+  margin-bottom: 79rpx;
+  position: relative; }
+  .carPic image {
+    width: 100%; }
+  .carPic .links {
+    width: 244rpx;
+    height: 63rpx;
+    position: absolute;
+    bottom: 5rpx; }
+
+.orderList {
+  width: 635rpx;
+  height: 240rpx;
+  margin: 0 auto;
+  position: relative;
+  border-bottom: 2rpx solid #ccc;
+  overflow: hidden; }
+  .orderList .titModal {
+    width: 100%;
+    height: 53rpx;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    z-index: 100; }
+  .orderList .checks {
+    width: 50rpx;
+    height: 50rpx;
+    background: #f1f1f1;
+    border-radius: 100%;
+    position: absolute;
+    left: 16rpx;
+    top: 98rpx;
+    overflow: hidden; }
+    .orderList .checks image {
+      width: 100%; }
+  .orderList .atsp .at-swipe-action__option {
+    height: 100rpx; }
+  .orderList .headers {
+    width: 537rpx;
+    height: 244rpx;
+    margin-top: 53rpx;
+    position: relative;
+    left: 99rpx; }
+    .orderList .headers .del {
+      width: 64rpx;
+      height: 30rpx;
+      background: #d2d2d2;
+      color: #fff;
+      border-radius: 30rpx;
+      font-size: 17rpx;
+      line-height: 30rpx;
+      text-align: center;
+      position: absolute;
+      right: 13rpx;
+      z-index: 20; }
+    .orderList .headers .pic {
+      width: 151rpx;
+      height: 151rpx;
+      overflow: hidden;
+      float: left;
+      position: relative;
+      z-index: 12;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      /*垂直居中*/
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      /*水平居中*/ }
+      .orderList .headers .pic image {
+        width: 100%;
+        vertical-align: middle;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+            -ms-flex-align: center;
+                align-items: center; }
+    .orderList .headers .txts {
+      float: left;
+      width: 387rpx;
+      height: 152rpx;
+      margin-bottom: 51rpx;
+      position: relative; }
+      .orderList .headers .txts .titHead {
+        width: 275rpx;
+        height: 60rpx;
+        line-height: 29rpx;
+        text-align: left;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+        white-space: normal;
+        font-size: 23rpx;
+        margin-top: 39rpx;
+        margin-left: 44rpx;
+        margin-bottom: 20rpx; }
+      .orderList .headers .txts .money {
+        width: 387rpx;
+        height: 23rpx;
+        position: absolute;
+        font-size: 23rpx;
+        font-weight: 600;
+        right: 0;
+        z-index: 100; }
+        .orderList .headers .txts .money .much {
+          width: 160rpx;
+          -o-text-overflow: ellipsis;
+             text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          margin-left: 44rpx;
+          height: 23rpx;
+          line-height: 23rpx;
+          font-size: 23rpx;
+          position: absolute;
+          left: 0;
+          right: 0;
+          z-index: 11; }
+        .orderList .headers .txts .money .nums {
+          width: 362rpx;
+          text-align: right;
+          height: 23rpx;
+          line-height: 23rpx;
+          font-size: 23rpx;
+          position: absolute;
+          right: 25rpx; }
+    .orderList .headers .textBox View Text {
+      font-size: 29rpx;
+      line-height: 52rpx; }
+    .orderList .headers .textBox View Text:nth-child(2) {
+      position: absolute;
+      right: 0; }
+
+.orderList:nth-last-child(1) {
+  width: 635rpx;
+  height: 240rpx;
+  margin: 0 auto;
+  position: relative;
+  border-bottom: 2rpx solid #ccc;
+  overflow: hidden; }
+
+.top {
+  width: 81rpx;
+  height: 71rpx;
+  margin: 0 auto;
+  display: block;
+  margin-top: 50rpx; }
+  .top image {
+    width: 41rpx;
+    margin: 0 auto;
+    display: block; }
+
+.details {
+  min-height: 174rpx;
+  margin-top: 50rpx;
+  border-bottom: 2rpx solid #e5e5e5; }
+  .details View {
+    color: #898989;
+    font-size: 23rpx;
+    line-height: 37rpx;
+    width: 572rpx; }
+
+.address {
+  min-height: 174rpx;
+  margin-top: 38rpx; }
+  .address View {
+    font-size: 27rpx;
+    line-height: 48rpx;
+    width: 572rpx;
+    margin: 0 auto; }

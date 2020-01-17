@@ -1,0 +1,20 @@
+<block>
+    <view>
+        <at-modal isOpened="{{errTip == 'none' ? false : true}}" __triggerObserer="{{ _triggerObserer }}" className="kmDialog" wx:key="errTipDialog">
+            <at-modal-header __triggerObserer="{{ _triggerObserer }}">提示
+                <view class="icon-wrap">
+                    <image src="{{iconClose}}" class="icon-close" bindtap="funPrivateIMBfL"></image>
+                </view>
+            </at-modal-header>
+            <at-modal-content __triggerObserer="{{ _triggerObserer }}">{{errTip == 'none' ? errTip : '无提示信息！'}}</at-modal-content>
+        </at-modal>
+        <at-modal isOpened="{{alert}}" __triggerObserer="{{ _triggerObserer }}" className="kmDialog" wx:key="errTipDialog">
+            <at-modal-header __triggerObserer="{{ _triggerObserer }}">
+                <view class="icon-wrap">
+                    <image src="{{iconClose}}" class="icon-close" bindtap="funPrivateEqIVZ"></image>
+                </view>
+            </at-modal-header>
+            <at-modal-content className="main" __triggerObserer="{{ _triggerObserer }}">根据邮管局最新实名认证规定，提交信息时需填写真实姓名，不可填写先生、小姐等称谓。</at-modal-content>
+        </at-modal>
+    </view>
+</block>

@@ -1,0 +1,43 @@
+
+.wrap {
+  position: relative;
+  height: 192rpx;
+  top: 48rpx;
+  border-radius: 10rpx; }
+  .wrap .headPics {
+    width: 105rpx;
+    height: 105rpx;
+    border-radius: 100%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 26rpx;
+    margin-bottom: 22rpx;
+    overflow: hidden;
+    position: relative;
+    top: 48rpx; }
+  .wrap .headPic {
+    width: 105rpx;
+    height: 105rpx;
+    border-radius: 100%;
+    margin: 0 auto;
+    display: block;
+    margin-top: 26rpx;
+    margin-bottom: 22rpx;
+    overflow: hidden;
+    background: #ccc; }
+  .wrap .nick {
+    text-align: center;
+    font-size: 30rpx;
+    color: #000; }
+  .wrap .staus {
+    font-size: 30rpx;
+    text-align: center;
+    color: #000; }
+    .wrap .staus .phone {
+      color: #a0a0a0;
+      font-size: 22rpx;
+      height: 20rpx;
+      line-height: 20rpx; }
+  .wrap .user {
+    display: block;
+    margin: 0 auto; }

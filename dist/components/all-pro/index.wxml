@@ -1,0 +1,98 @@
+<block>
+    <block wx:if="{{!anonymousState__temp17}}">
+        <view class="fragment">
+            <view class="presenter">
+                <view class="tabs">
+                    <view class="layout">
+                        <view class="{{anonymousState__temp5}}" data-index="{{0}}" bindtap="handleTabClick">系列
+                            <block wx:if="{{tab === 0}}">
+                                <view class="pointer"></view>
+                            </block>
+                        </view>
+                    </view>
+                    <view class="layout">
+                        <view class="{{anonymousState__temp6}}" data-index="{{1}}" bindtap="handleTabClick">尺寸
+                            <block wx:if="{{tab === 1}}">
+                                <view class="pointer"></view>
+                            </block>
+                        </view>
+                    </view>
+                    <view class="layout">
+                        <view class="{{anonymousState__temp7}}" data-index="{{2}}" bindtap="handleTabClick">销量
+                            <block wx:if="{{tab === 2}}">
+                                <view class="pointer"></view>
+                            </block>
+                        </view>
+                    </view>
+                </view>
+                <block wx:if="{{tab === 0}}">
+                    <view class="filter">
+                        <view class="col">
+                            <view wx:key="$original" data-name="{{e.$original}}" bindtap="handleSerieClick" class="{{e.$loopState__temp9}}" wx:for="{{loopArray2}}" wx:for-item="e" wx:for-index="_anonIdx">{{e.$original}}</view>
+                        </view>
+                    </view>
+                </block>
+                <block wx:if="{{tab === 1}}">
+                    <view class="filter">
+                        <view class="col">
+                            <view data-name="NB" class="{{anonymousState__temp10}}" bindtap="handleSizeClick">NB</view>
+                            <view data-name="S" class="{{anonymousState__temp11}}" bindtap="handleSizeClick">S</view>
+                            <view data-name="M" class="{{anonymousState__temp12}}" bindtap="handleSizeClick">M</view>
+                            <view data-name="L" class="{{anonymousState__temp13}}" bindtap="handleSizeClick">L</view>
+                            <view data-name="XL" class="{{anonymousState__temp14}}" bindtap="handleSizeClick">XL</view>
+                            <view data-name="XXL" class="{{anonymousState__temp15}}" bindtap="handleSizeClick">XXL</view>
+                        </view>
+                    </view>
+                </block>
+            </view>
+            <view class="restricted-rolling-region" style="{{anonymousState__temp16}}">
+                <view class="scroll-area">
+                    <view class="waterfall">
+                        <view class="List-left">
+                            <view class="startsCard" wx:key="index" wx:for="{{loopArray0}}" wx:for-item="item" wx:for-index="index">
+                                <view class="box">
+                                    <block wx:if="{{index == 0}}">
+                                        <image src="{{winer}}" mode="widthFix" class="wins"></image>
+                                    </block>
+                                    <image src="{{item.$original.banner_image_path}}" mode="widthFix" class="pic" bindtap="toLink" data-e-tap-so="this" data-e-tap-a-a="{{item.$original.id}}"></image>
+                                    <view class="main">
+                                        <view class="tits">{{item.$original.name}}{{item.$original.size}}</view>
+                                        <view class="detiit">{{item.$original.comment3 ? item.$original.comment3 : ''}}</view>
+                                        <view class="botin">
+                                            <view class="price">¥{{item.$loopState__temp2}}</view>
+                                            <view class="sales">{{item.$original.sales}}人付款</view>
+                                            <view class="cart" bindtap="addCart" data-e-tap-so="this" data-e-tap-a-a="{{item.$original.id}}">
+                                                <image src="{{cart}}" mode="widthFix" class="heart"></image>
+                                            </view>
+                                        </view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                        <view class="List-right">
+                            <view class="startsCard" wx:key="index" wx:for="{{loopArray1}}" wx:for-item="item" wx:for-index="index">
+                                <view class="box">
+                                    <block wx:if="{{index == 0}}">
+                                        <image src="{{winer}}" mode="widthFix" class="wins"></image>
+                                    </block>
+                                    <image src="{{item.$original.banner_image_path}}" mode="widthFix" class="pic" bindtap="toLink" data-e-tap-so="this" data-e-tap-a-a="{{item.$original.id}}"></image>
+                                    <view class="main">
+                                        <view class="tits">{{item.$original.name}}{{item.$original.size}}</view>
+                                        <view class="detiit">{{item.$original.comment3 ? item.$original.comment3 : ''}}</view>
+                                        <view class="botin">
+                                            <view class="price">¥{{item.$loopState__temp4}}</view>
+                                            <view class="sales">{{item.$original.sales}}人付款</view>
+                                            <view class="cart" bindtap="addCart" data-e-tap-so="this" data-e-tap-a-a="{{item.$original.id}}">
+                                                <image src="{{cart}}" mode="widthFix" class="heart"></image>
+                                            </view>
+                                        </view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </block>
+</block>

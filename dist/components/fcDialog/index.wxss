@@ -1,0 +1,35 @@
+
+.boxss {
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+  top: 0; }
+  .boxss .wrap {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    margin: 0 auto;
+    position: fixed;
+    opacity: .7; }
+  .boxss .pic {
+    width: 589rpx;
+    height: 939rpx;
+    background: orange;
+    position: absolute;
+    z-index: 10001;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 50rpx; }
+
+.linksBtn {
+  width: 330rpx;
+  height: 80rpx;
+  position: absolute;
+  z-index: 10002;
+  left: 0;
+  right: 0;
+  top: 900rpx;
+  margin: 0 auto; }

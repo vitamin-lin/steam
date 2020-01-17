@@ -1,0 +1,38 @@
+
+.rule-dialog-cn {
+  padding: 18rpx;
+  padding-bottom: 36rpx;
+  font-size: 22rpx;
+  line-height: 36rpx;
+  font-weight: 600; }
+
+.botomTxt {
+  font-size: 18rpx;
+  color: #535353;
+  line-height: 36rpx;
+  margin-top: 55rpx;
+  margin-bottom: 108rpx;
+  font-weight: 400; }
+
+.tits {
+  color: #c82d2d;
+  margin-top: 47rpx; }
+
+.tits:nth-child(1) {
+  color: #c82d2d;
+  margin-top: 0; }
+
+.icons {
+  width: 100%;
+  height: 80rpx;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000; }
+  .icons Image {
+    width: 89rpx;
+    height: 35rpx;
+    margin: 0 auto;
+    display: block;
+    margin-top: 25rpx; }

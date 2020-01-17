@@ -1,0 +1,52 @@
+
+.kmDialog .at-modal__container {
+  width: 694rpx; }
+
+.kmDialog .at-modal__header {
+  width: 694rpx;
+  height: 114rpx;
+  line-height: 78rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.kmDialog .at-modal__content {
+  width: 694rpx;
+  min-height: 695rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.kmDialog .at-modal__footer {
+  height: 84rpx; }
+  .kmDialog .at-modal__footer .at-modal__action {
+    font-size: 24rpx;
+    color: #959595;
+    text-align: center;
+    width: 100%;
+    line-height: 84rpx;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+
+.kmDialog .at-modal__content {
+  width: 694rpx;
+  min-height: 395rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.kmDialog .main {
+  width: 440rpx;
+  margin: 0 auto;
+  font-size: 33rpx;
+  line-height: 58rpx; }
+
+.icon-wrap {
+  width: 65rpx;
+  height: 65rpx;
+  position: absolute;
+  right: 25rpx;
+  top: 25rpx;
+  overflow: hidden; }
+  .icon-wrap .icon-close {
+    width: 65rpx;
+    height: 65rpx; }

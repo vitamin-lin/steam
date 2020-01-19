@@ -1,23 +1,17 @@
 <block>
     <view class="user">
         <view class="user_box">
-            <user-header reuxState="{{state}}" __triggerObserer="{{ _triggerObserer }}"></user-header>
+            <user-header __triggerObserer="{{ _triggerObserer }}"></user-header>
             <view class="getUser">
                 <logins __triggerObserer="{{ _triggerObserer }}"></logins>
             </view>
-            <panel title="订单中心" __triggerObserer="{{ _triggerObserer }}" changeId="{{id}}" className="panel_top panel_first" url="/pages/order/index">
-                <policy bindonchangeid="onChangeId" __triggerObserer="{{ _triggerObserer }}" __fn_onChangeId="{{true}}"></policy>
-            </panel>
             <view class="panels" bindtap="links"></view>
-            <at-list className="panel_top address" __triggerObserer="{{ _triggerObserer }}" hasBorder="{{false}}">
-                <at-list-item title="收货地址" __triggerObserer="{{ _triggerObserer }}" arrow="right" hasBorder="{{false}}" thumb="{{biaoqian}}" bindonclick="getAddress" iconInfo="{{anonymousState__temp}}" __fn_onClick="{{true}}"></at-list-item>
-                <at-list-item title="我的优惠券" __triggerObserer="{{ _triggerObserer }}" arrow="right" hasBorder="{{false}}" thumb="{{quan}}" bindonclick="getCoupons" className="quan" iconInfo="{{anonymousState__temp2}}" __fn_onClick="{{true}}"></at-list-item>
-            </at-list>
-            <view class="verCode">
-                <view class="codeHeader">
-                    <image class="erweima" src="https://mpmall.huggiesapp.cn/storage/wxmall/another/erweima.png"></image><text>关注公众号 扫码免费领试用</text>
-                    <image class="codePic" src="https://mpmall.huggiesapp.cn/storage/wxmall/another/codePicnew.png" mode="aspectFit"></image>
-                </view>
+            <view class="main">
+                <at-list className="panel_top address" __triggerObserer="{{ _triggerObserer }}" hasBorder="{{false}}">
+                    <at-list-item title="我的记录" __triggerObserer="{{ _triggerObserer }}" arrow="right" hasBorder="{{false}}" thumb="{{biaoqian}}" bindonclick="getAddress" iconInfo="{{anonymousState__temp}}" __fn_onClick="{{true}}"></at-list-item>
+                    <at-list-item title="我的成就" __triggerObserer="{{ _triggerObserer }}" arrow="right" hasBorder="{{false}}" thumb="{{quan}}" bindonclick="getCoupons" className="quan" iconInfo="{{anonymousState__temp2}}" __fn_onClick="{{true}}"></at-list-item>
+                    <at-list-item title="客服" __triggerObserer="{{ _triggerObserer }}" arrow="right" hasBorder="{{false}}" thumb="{{icons}}" className="icons" iconInfo="{{anonymousState__temp3}}"></at-list-item>
+                </at-list>
             </view>
         </view>
     </view>

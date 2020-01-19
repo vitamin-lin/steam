@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "cart-list": "./cartList/cartList",
-    "waterfall-flow": "../../components/waterfall-flow/waterfallFlow"
-  },
-  "navigationBarTitleText": "购物车"
-}

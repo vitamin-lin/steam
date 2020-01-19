@@ -1,7 +1,9 @@
 {
   "usingComponents": {
-    "curtain": "../../components/curtain/index",
-    "fc-dialog": "../../components/fcDialog/index"
+    "user": "../user/index",
+    "knowledge": "../knowledge/index",
+    "at-tab-bar": "../../npm/taro-ui/dist/weapp/components/tab-bar/index",
+    "at-icon": "../../npm/taro-ui/dist/weapp/components/icon/index"
   },
-  "navigationBarTitleText": "好奇官方精品商城"
+  "navigationBarTitleText": "MARS MAKER"
 }

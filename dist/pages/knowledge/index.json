@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "logins": "../../components/login/index"
+  },
+  "navigationBarTitleText": "知识树"
+}

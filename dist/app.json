@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/bulk/index",
+    "pages/home/index",
     "pages/user/index"
   ],
   "window": {
@@ -13,8 +13,8 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/bulk/index",
-        "text": "组队资讯",
+        "pagePath": "pages/user/index",
+        "text": "知识树",
         "iconPath": "./assets/cate.png",
         "selectedIconPath": "./assets/cate-active.png"
       },

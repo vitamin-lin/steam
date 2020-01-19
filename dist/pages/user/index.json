@@ -2,8 +2,6 @@
   "usingComponents": {
     "user-header": "./userHeader/userHeader",
     "logins": "../../components/login/index",
-    "panel": "../../components/panel/index",
-    "policy": "./policy/index",
     "at-list": "../../npm/taro-ui/dist/weapp/components/list/index",
     "at-list-item": "../../npm/taro-ui/dist/weapp/components/list/item/index"
   },

@@ -1,9 +1,7 @@
 <block>
     <view>
-        <block wx:if="{{!logins}}">
-            <view>
-                <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" type="text" form-type="submit">微信登陆</button>
-            </view>
-        </block>
+        <view>
+            <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" type="text" form-type="submit">微信登陆</button>
+        </view>
     </view>
 </block>

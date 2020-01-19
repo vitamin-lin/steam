@@ -1,0 +1,12 @@
+<block>
+    <view class="wrap">
+        <view class="getUser">
+            <logins __triggerObserer="{{ _triggerObserer }}"></logins>
+        </view>
+        <view>
+            <view class="listWrap" wx:key="index" bindtap="linkWrap" wx:for="{{list}}" wx:for-item="item" wx:for-index="index" data-e-tap-so="this" data-e-tap-a-a="{{index}}">
+                <view class="tit">{{item.text}}>></view>
+            </view>
+        </view>
+    </view>
+</block>

@@ -82,7 +82,6 @@ function CheckLogin() {
 
             var app = getApp();
             /* eslint-enable */
-            app.km.indentify(openid, unionid);
             _index2.default.setStorageSync('token', token);
             // Taro.setStorageSync('expInfo', {
             //   startTime: new Date().getTime(),

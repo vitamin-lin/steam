@@ -1,8 +1,0 @@
-{
-  "usingComponents": {
-    "at-tabs": "../../npm/taro-ui/dist/weapp/components/tabs/index",
-    "order-list": "./orderList/orderList"
-  },
-  "navigationBarTitleText": "订单中心",
-  "disableScroll": true
-}

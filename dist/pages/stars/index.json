@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "stars-flow": "../../components/newStars/index"
-  },
-  "navigationBarTitleText": "星选好物"
-}

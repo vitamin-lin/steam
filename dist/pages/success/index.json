@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "waterfall-flow": "../../components/waterfall-flow/waterfallFlow"
-  },
-  "navigationBarTitleText": "支付成功"
-}

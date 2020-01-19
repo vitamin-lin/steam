@@ -1,7 +1,0 @@
-<block>
-    <view class="boxss">
-        <view class="wrap"></view>
-        <view class="pic" style="background: url(https://mpmall.huggiesapp.cn/storage/wxmall/another/fcTxt4.png) no-repeat;background-size: 100% auto;"></view>
-        <view class="linksBtn" bindtap="funPrivatefEVww"></view>
-    </view>
-</block>

@@ -1,7 +1,0 @@
-<block>
-    <view class="box">
-        <view class="success">
-            <stars-flow __triggerObserer="{{ _triggerObserer }}"></stars-flow>
-        </view>
-    </view>
-</block>

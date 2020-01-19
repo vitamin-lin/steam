@@ -1,7 +1,0 @@
-<block>
-    <view class="web-view">
-        <block wx:if="{{mini_openid !== ''}}">
-            <web-view src="{{endPath}}" bindmessage="handleMessage"></web-view>
-        </block>
-    </view>
-</block>

@@ -20,10 +20,6 @@ var _index5 = _interopRequireDefault(_index4);
 
 var _global = require("./utils/global.js");
 
-require("./utils/kmConf.js");
-
-require("./utils/km.js");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -35,6 +31,9 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 // import { View, Text, ScrollView } from '@tarojs/components'
 
 /* eslint-enable */
+
+// import './utils/kmConf'
+// import './utils/km'
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -65,17 +64,12 @@ var _App = function (_BaseComponent) {
       isPhoneX: 0
       /* eslint-enable */
     }, _this.config = {
-      pages: [
-      // 'pages/home/index',
+      pages: ['pages/home/index',
       // 'pages/confirmOrder/index',
       // 'pages/shareDetail/index',
       // 'pages/coupons/index',
       // 'pages/detail/index',
-      'pages/bulk/index',
-      // 'pages/stars/index',
-      // 'pages/starsDetail/index',
-      // 'pages/newStarsDetail/index',
-      // 'pages/banner/index',
+      // 'pages/knowledge/index',
       'pages/user/index'],
       window: {
         backgroundTextStyle: 'light',
@@ -86,30 +80,11 @@ var _App = function (_BaseComponent) {
       },
       tabBar: {
         list: [{
-          pagePath: 'pages/bulk/index',
-          text: '组队资讯',
+          pagePath: 'pages/user/index',
+          text: '知识树',
           iconPath: './assets/cate.png',
           selectedIconPath: './assets/cate-active.png'
-        },
-        // {
-        //   pagePath: 'pages/all/index',
-        //   text: '全部商品',
-        //   iconPath: './assets/all.png',
-        //   selectedIconPath: './assets/all-active.png'
-        // },
-        // {
-        //   pagePath: 'pages/home/index',
-        //   text: '首页',
-        //   iconPath: './assets/home.png',
-        //   selectedIconPath: './assets/home-active.png'
-        // },
-        // {
-        //   pagePath: 'pages/cart/index',
-        //   text: '购物车',
-        //   iconPath: './assets/cart.png',
-        //   selectedIconPath: './assets/cart-active.png'
-        // },
-        {
+        }, {
           pagePath: 'pages/user/index',
           text: '我的',
           iconPath: './assets/user.png',

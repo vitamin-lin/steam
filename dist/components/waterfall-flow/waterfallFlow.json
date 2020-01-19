@@ -1,6 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "stars-flow": "../stars-flow/starsFlow"
-  }
-}

@@ -1,5 +1,0 @@
-<block>
-    <view class="wrap">
-        <stars-flow __triggerObserer="{{ _triggerObserer }}"></stars-flow>
-    </view>
-</block>

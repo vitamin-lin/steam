@@ -28,6 +28,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var biaoqian = "/assets/images/biaoqian.png";
 var quan = "/assets/images/quan.png";
+var icons = "/assets/images/heart.png";
 
 var User = (_dec = (0, _withSare2.default)(), _dec(_class = (_temp2 = _class2 = function (_BaseComponent) {
   _inherits(User, _BaseComponent);
@@ -43,7 +44,7 @@ var User = (_dec = (0, _withSare2.default)(), _dec(_class = (_temp2 = _class2 = 
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this2 = _possibleConstructorReturn(this, (_ref = User.__proto__ || Object.getPrototypeOf(User)).call.apply(_ref, [this].concat(args))), _this2), _this2.$usedState = ["anonymousState__temp", "anonymousState__temp2", "state", "id", "biaoqian", "quan", "userInfo", "userLogin"], _this2.config = {
+    return _ret = (_temp = (_this2 = _possibleConstructorReturn(this, (_ref = User.__proto__ || Object.getPrototypeOf(User)).call.apply(_ref, [this].concat(args))), _this2), _this2.$usedState = ["anonymousState__temp", "anonymousState__temp2", "anonymousState__temp3", "biaoqian", "quan", "icons", "state", "userInfo", "userLogin", "id"], _this2.config = {
       navigationBarTitleText: '个人中心'
     }, _this2.state = {
       userInfo: '',
@@ -111,23 +112,6 @@ var User = (_dec = (0, _withSare2.default)(), _dec(_class = (_temp2 = _class2 = 
       });
     }
   }, {
-    key: "getCoupons",
-    value: function getCoupons() {
-      var app = getApp();
-      app.km.track('coupons', null);
-      _index2.default.navigateTo({
-        url: '/pages/coupons/index?type=1'
-      });
-    }
-  }, {
-    key: "onChangeId",
-    value: function onChangeId(e) {
-      // console.warn(e)
-      this.setState({
-        id: e
-      });
-    }
-  }, {
     key: "componentDidShow",
     value: function componentDidShow() {
       var userLogin = _index2.default.getStorageSync('userLogin');
@@ -143,14 +127,6 @@ var User = (_dec = (0, _withSare2.default)(), _dec(_class = (_temp2 = _class2 = 
           userLogin: false
         });
       }
-    }
-  }, {
-    key: "onTabItemTap",
-    value: function onTabItemTap(item) {
-      console.log(item);
-      var arrTrack = ['groupnews', 'allgd', 'index', 'shoppingcart', 'personal'];
-      var app = getApp();
-      app.km.track(arrTrack[item.index], null);
     }
   }, {
     key: "_createData",
@@ -173,19 +149,26 @@ var User = (_dec = (0, _withSare2.default)(), _dec(_class = (_temp2 = _class2 = 
         color: '#FF4949',
         customStyle: 'iconAddress'
       };
+      var anonymousState__temp3 = {
+        size: 25,
+        color: '#FF4949',
+        customStyle: 'iconAddress'
+      };
       Object.assign(this.__state, {
         anonymousState__temp: anonymousState__temp,
         anonymousState__temp2: anonymousState__temp2,
-        state: state,
+        anonymousState__temp3: anonymousState__temp3,
         biaoqian: biaoqian,
-        quan: quan
+        quan: quan,
+        icons: icons,
+        state: state
       });
       return this.__state;
     }
   }]);
 
   return User;
-}(_index.Component), _class2.properties = {}, _class2.$$events = ["onChangeId", "links", "getAddress", "getCoupons"], _class2.propTypes = {}, _temp2)) || _class);
+}(_index.Component), _class2.properties = {}, _class2.$$events = ["links", "getAddress", "getCoupons"], _class2.propTypes = {}, _temp2)) || _class);
 exports.default = User;
 
 Component(require('../../npm/@tarojs/taro-weapp/index.js').default.createComponent(User, true));

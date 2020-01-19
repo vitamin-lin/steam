@@ -18,10 +18,6 @@ var _api = require("../../service/api.js");
 
 var _api2 = _interopRequireDefault(_api);
 
-var _action = require("../../store/userInfo/action.js");
-
-var _action2 = _interopRequireDefault(_action);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -57,9 +53,9 @@ var login = (_temp2 = _class = function (_BaseComponent) {
     }
   }, {
     key: "componentDidShow",
-    value: function componentDidShow() {
-      this.member();
-    }
+    value: function componentDidShow() {}
+    // this.member()
+
 
     // 判断是否登陆授权
 
@@ -91,12 +87,7 @@ var login = (_temp2 = _class = function (_BaseComponent) {
         var _res$data = res.data,
             unionid = _res$data.unionid,
             openid = _res$data.openid;
-        /* eslint-disable */
 
-        var app = getApp();
-        /* eslint-enable */
-        app.km.indentify(openid, unionid);
-        (0, _action2.default)(detail);
         _index2.default.setStorage({ key: 'userInfo', data: detail.userInfo });
         _index2.default.navigateTo({
           url: '/pages/order/index?id=0'
@@ -116,13 +107,6 @@ var login = (_temp2 = _class = function (_BaseComponent) {
       if (response.detail.userInfo) {
         this.sendUserInfo(response);
         /* eslint-enable */
-        app.km.track('authorize', null);
-      } else {
-        //拒绝,保持当前页面，直到同意
-        app.km.track('cancel', null);
-        // Taro.navigateTo({
-        //   url: '/pages/order/index?id=0'
-        // })
       }
     }
   }, {
